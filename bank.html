@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="bank.css">
+</head>
+<body>
+    <img src="https://www.awxcdn.com/adc-assets/images/h" alt="">
+    <!-- head -->
+    <!-- <div class="head">
+        <!-- left-items -->
+        <!-- <div class="items-left" style="margin-left: 10px;">
+            <ul>
+                <li>Personal</li>
+                <li>Business</li>
+                <li>Islamic</li>
+                <li style="border: none;">Prestige</li>&nbsp;&nbsp;
+            </ul>
+        </div>
+            <!-- right items -->
+            <!-- <div class="items-right">
+                <ul>
+                    <li>About us</li>
+                    <li>InvestorRelation</li>
+                    <li>Sustainability</li>
+                    <li>Forex</li>
+                    <li>Careers</li>
+                    <li>News</li>
+                    <li>Contact Us</li>
+                    <li>resources</li>
+                </ul>
+            </div> -->
+            <!-- <div class="icon">
+                <i class="fa-regular fa-moon"></i>
+        </div> -->
+        <!-- </div> -->
+        <form  onsubmit="myFunc(event)">
+            <div>
+                <label>name</label>
+            <input id="full_name" type="text" placeholder="enter name">
+        </div>
+        <div>
+         <label id="gender">gender</label>
+         <input type="radio">men
+         <input type="radio">women
+        </div>
+        <div>
+            <label>email</label>
+            <input type="text" id="email" placeholder="email">
+        </div>
+        <div>
+            <label>date of birth</label>
+            <input type="date" id="date_of_birth" placeholder="date of birth">
+        </div>
+        <input type="submit" value="submit">
+        </form>
+        <script>
+            function myFunc(event){
+                event.preventDefault();
+          
+            var full_name=document.getElementById("full_name").value;
+            var gender=document.getElementById("gender");
+            var email=document.getElementById("email").value;
+            var date_of_birth=document.getElementById("date_of_birth").value;
+
+            gender.checked ?gender="male":gender="female";
+            localStorage.setItem('is_full_name',full_name);
+            localStorage.setItem('is_gender',gender);
+            localStorage.setItem('is_date_of_birth',date_of_birth);
+            localStorage.setItem('email',email);
+        }
+        </script>
+</body>
+</html>
